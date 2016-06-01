@@ -1,0 +1,239 @@
+/* ------------ Color Palette ------------ */
+
+/* 
+Yellow #FFD43D
+Light Yellow #FFF3C8
+Blue #006EEE
+Light Blue #9cbee6
+*/
+
+/* ------------ MAIN ------------ */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    right: 0;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown-content {
+    display: block;
+}
+
+
+#topNav{
+   z-index: 1000;
+   position:fixed;
+   left:0px;
+   top:0px;
+   height:58px;
+   width:100%;
+   background: #006EEE;
+   box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.35);
+}
+
+.topSection{
+    width:40%;
+    height:58px;
+    float:left;
+}
+
+.topButton{
+    display: block;
+    float: right;
+    padding-top: 9px;
+}
+
+#helpImg{
+    height: 40px;
+    padding-right: 15px;
+}
+
+#locateImg{
+    height: 40px;
+    padding-right: 5px;
+}
+
+#logoSection{
+    width:20%;
+    height:58px;
+    float:left;
+}
+
+#cityDisp{
+    font-size: 20px;
+    padding: 13px 15px;
+    color: white;
+}
+
+#logo{
+    display: block;
+    margin: auto;
+    height: 100%;
+}
+
+#bottomNav {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:58px;
+   width:100%;
+   background: #FFD43D;
+   box-shadow: 0px -2px 6px 1px rgba(0,0,0,0.35);
+}
+
+.tab{
+    width:33.33%;
+    height: 58px;
+    float:left;
+}
+.tab:hover{
+    background: #FFF3C8;
+}
+
+.navImg{
+    display: block;
+    margin: auto;
+    height: 100%;
+}
+
+#contents{
+    margin-top: 60px;
+    margin-bottom: 58px;
+    color: #006EEE;
+    text-align: center;
+    padding: 1%;
+    line-height: 1.2;
+}
+
+.oImg{
+    width: 100px;
+}
+
+
+/* ------------ GRID FOR OTHERS DATA ------------ */
+.grid {
+  max-width: 100%;
+  margin: 10px auto;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-item {
+  width: 15%;
+  font-size: 0;
+}
+
+.grid-item--width2 { 
+    width: 200px; 
+    font-size: 1em;
+}
+
+.grid-item:hover {
+  border-radius: 25px;
+  border: 2px solid #006EEE;
+  cursor: pointer;
+}
+
+.othersImg{
+    width: 100%;
+}
+
+/* ------------ SLIDER ------------ */
+#sliderBox{
+    width: 90%;
+    margin: 1% auto;
+}
+
+.rangeslider,
+input[type='range'] {
+  max-width: 100%;
+}
+
+.rangeslider__fill {
+  cursor: pointer;
+  box-shadow: 1.2px 1.2px 3.7px #4738D8, 0px 0px 1.2px #4738D8;
+  background: #006EEE;
+  border-radius: 25px;
+  border: 0px solid #006EEE;
+}
+
+.rangeslider__handle {
+  box-shadow: 1.6px 1.6px 5.3px rgba(0, 0, 0, 0.64), 0px 0px 1.6px #FFCE25;
+  border: 0px solid #ff1e00;
+  border-radius: 50px;
+  background: #FFCE25;
+  
+  &:after {
+    background: 0;
+  }
+}
+
+/* ------------ CHECKBOX ------------ */
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label {
+    display:inline-block;
+    width:30px;
+    height:30px;
+    vertical-align:middle;
+    background-color: #9cbee6;
+    cursor:pointer;
+    border: 3px solid #006EEE;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px; /* future proofing */
+}
+input[type="checkbox"] + label:hover {
+    background-color: #FFCE25;
+}
+input[type="checkbox"]:checked + label {
+    background-color: #FFCE25;
+}
+
+/* ------------ MOBILE QUERIES ----------- */
+/* Larger than mobile */
+@media (min-width: 400px) {
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+    .grid {
+      max-width: 90%;
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    #sliderBox{
+        width: 40%;
+    }
+    #contents{
+        padding: 2% 20%;
+    }
+    .grid {
+      max-width: 70%;
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}

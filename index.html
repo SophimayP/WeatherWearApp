@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>WeatherWear</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">     
+<!-- ------FONTS AND CSS------- -->
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+        <link rel="stylesheet" href="css/rangeslider.css">
+        <link rel="stylesheet" href="css/style.css">       
+<!-- ------FAVICON AND APP ICON------- -->    
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" href="images/touchicon.png">
+	</head>
+	<body>  
+<!-- ------MAIN PAGE LAYOUT------- -->
+        <div id="topNav">
+            <div class="topSection">
+                <div id="cityDisp"></div>
+            </div>
+            <div id="logoSection">
+                <img id="logo" src="images/umbrella.svg">
+            </div>
+            <div class="topSection">
+                <div class="topButton">
+                    <img id="helpImg" src="images/help.png">
+                </div>
+                <div class="dropdown topButton">
+                  <img id="locateImg" src="images/locate.png">
+                  <div id="locatemenu" class="dropdown-content">
+                      <select id="inputCity" name="cityEnter">
+                        <option value="locate">Auto Locate</option>
+                        <option value="Auckland">Auckland</option>
+                        <option value="Blenheim">Blenheim</option>
+                        <option value="Christchurch">Christchurch</option>
+                        <option value="Dunedin">Dunedin</option>
+                        <option value="Hamilton">Hamilton</option>
+                        <option value="Invercargill">Invercargill</option>
+                        <option value="Napier">Napier</option>
+                        <option value="Nelson">Nelson</option>
+                        <option value="New Plymouth">New Plymouth</option>
+                        <option value="Palmerston North">Palmerston North</option>
+                        <option value="Queenstown">Queenstown</option>
+                        <option value="Tauranga">Tauranga</option>
+                        <option value="Timaru">Timaru</option>
+                        <option value="Wanaka">Wanaka</option>
+                        <option value="Wellington">Wellington</option>
+                        <option value="Whangarei">Whangarei</option>
+                    </select>
+                  </div>
+                </div>
+            </div>
+        </div> 
+    
+        <div id="contents">
+            
+            <div id="metservData">
+                <h3>Hello!</h3>
+                <p><div id="weatherDisp"></div></p>
+                <img class="oImg" id="1" src="images/outfits/4.png">
+                <img class="oImg" id="1to2" src="images/outfits/5.png">
+                <img class="oImg" id="2" src="images/outfits/6.png">
+                <img class="oImg" id="2to3" src="images/outfits/7.png">
+                <img class="oImg" id="3" src="images/outfits/8.png">
+                <img class="oImg" id="3to4" src="images/outfits/9.png">
+                <p><div id="layersDisp"></div></p>
+                <p><div id="rainDisp"></div></p>
+            </div>
+
+            <div id="othersData">
+                <h3>What other people are wearing here:</h3>
+                <div id="change"></div>    
+            </div>
+
+            <div id="enterData">
+                <form>
+                    <h3>What are you wearing?</h3>     
+
+                    <img class="oImg" id="o1" src="images/outfits/1.png">
+                    <img class="oImg" id="o2" src="images/outfits/2.png">
+                    <img class="oImg" id="o3" src="images/outfits/3.png">
+                    <img class="oImg" id="o4" src="images/outfits/4.png">
+                    <img class="oImg" id="o5" src="images/outfits/5.png">
+                    <img class="oImg" id="o6" src="images/outfits/6.png">
+                    <img class="oImg" id="o7" src="images/outfits/7.png">
+                    <img class="oImg" id="o8" src="images/outfits/8.png">
+                    <img class="oImg" id="o9" src="images/outfits/9.png">
+
+                    <div id="sliderBox">
+                        <input id="slider" type="range" min="1" max="9" step="1" value="5"/>
+                    </div>
+                    <h5>Taking a raincoat/umbrella?</h5>
+                    <input type="checkbox" name="Rain" id="rain"><label for="rain"></label>
+                    <p></p>
+                    <input class="button-primary" type="submit" id="submit">    
+                </form> 
+            </div>
+
+            <div id="helpAndAbout">
+                <h3>Welcome to WeatherWear!</h3>
+                <p>The aim of this web app is to provide a humanised and social view of weather data through suitable clothing for the day.</p>
+                <p>This is acheived through three different functionalities:</p>
+                <ul>
+                    <li>Check out the recommended clothing layers with data provided by the MetService.</li>
+                    <li>See what others in your area are wearing.</li>
+                    <li>Help us out and enter your own outfit of the day.</li>
+                </ul>
+                <p>First make sure you have allowed your location and you can see your city in the top left corner or select a city manually using the geolocation icon next to the help icon. When you are ready click any of the three respective icons in the navigation at the bottom of the page to begin.</p>
+                <p>Thanks to <a href="http://metservice.com/national/home">MetService</a> for weather data and <a href="https://www.google.co.nz/">Google</a> for geolocation.</p>
+                <br>
+                <p>© Sophie Price - All Rights Reserved // Project 3 for MDDN352 // 2016 // Victoria University of Wellington</p> 
+            </div>
+
+        </div>
+        
+        <div id="bottomNav">
+            <div id="metServBtn" class="tab">
+                <img class="navImg" src="images/metServ.png">
+            </div>
+            <div id="dispOthersBtn" class="tab">
+                <img class="navImg" src="images/others.png">
+            </div>
+            <div id="enterDataBtn" class="tab">
+                <img class="navImg" src="images/enter.png">
+            </div>
+        </div> 
+
+<!-- ------SCRIPTS AND PLUGINS----- -->
+        <script id="home-template" type="text/x-handlebars-template">
+		    	<div class="grid">
+		    	{{#each userEntries}}
+		    		<div class="anEntry">
+                        <div class="entryImg">{{scale}}</div>
+                        <p>Took a raincoat: {{rain}}</p>
+		    		</div>		    	
+		    	{{/each}}
+		    	</div>
+		</script>            
+        <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.1/handlebars.min.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ7402uvsGRTOP_pqKkRm3fjWXbeIJ7pg"></script>
+        <script src="js/rangeslider.min.js"></script>   
+        <script src="js/packery.pkgd.min.js"></script>
+        <script src="js/app.js"></script> 
+	</body>
+</html>
