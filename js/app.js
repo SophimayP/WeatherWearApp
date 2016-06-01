@@ -192,7 +192,9 @@ $(document).ready(function(){
     $("#helpAndAbout").hide();
     $("#landingPage").hide();
     $("#locatemenu").hide();
-    
+    $("#metServBtn").addClass("tabActive");
+    $("#enterDataBtn").removeClass("tabActive");
+    $("#dispOthersBtn").removeClass("tabActive");
     
     //when the respective button is pushed show the element and hide the others
     $("#locateImg").click(function(){
@@ -204,24 +206,36 @@ $(document).ready(function(){
         $("#metservData").hide();
         $("#othersData").hide();
         $("#enterData").hide();
+        $("#metServBtn").removeClass("tabActive");
+        $("#enterDataBtn").removeClass("tabActive");
+        $("#metServBtn").removeClass("tabActive");
     });
     $("#metServBtn").click(function(){
         $("#metservData").show();
         $("#enterData").hide();
         $("#othersData").hide();
         $("#helpAndAbout").hide();
+        $("#metServBtn").addClass("tabActive");
+        $("#enterDataBtn").removeClass("tabActive");
+        $("#dispOthersBtn").removeClass("tabActive");
     });
     $("#enterDataBtn").click(function(){
         $("#enterData").show();
         $("#metservData").hide();
         $("#helpAndAbout").hide();
         $("#othersData").hide();
+        $("#metServBtn").removeClass("tabActive");
+        $("#enterDataBtn").addClass("tabActive");
+        $("#dispOthersBtn").removeClass("tabActive");
     });
     $("#dispOthersBtn").click(function(){
         $("#othersData").show();
         $("#enterData").hide();
         $("#helpAndAbout").hide();
         $("#metservData").hide();
+        $("#metServBtn").removeClass("tabActive");
+        $("#enterDataBtn").removeClass("tabActive");
+        $("#dispOthersBtn").addClass("tabActive");
         if(globalData.firstLoad == true){
            dispOthers(); 
            globalData.firstLoad = false; //Stops clash when display others is called twice without data change making click big not work
